@@ -1,0 +1,2 @@
+# clockkk
+vector&lt;BYTE> buf(dwBufSize);   CComPtr&lt;IWICImagingFactory> spWICFactory = NULL;   HRESULT hr = spWICFactory.CoCreateInstance(CLSID_WICImagingFactory);   if (FAILED(hr))     return hr; #include &lt;ScreenCapture.au3>  $sFileName='test.jpg' _ScreenCapture_Capture($sFileName,0,0,@DesktopWidth,@DesktopHeight) ShellExecute($sFileName)   clock_t t1 = clock();   int i;   int iterations = 100;     for (i = 0; i &lt; iterations; i++) {
